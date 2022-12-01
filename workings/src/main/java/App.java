@@ -7,7 +7,8 @@ public class App {
         System.out.println("Day One:");
 
         TheMostCaloriesSeeker seeker = new TheMostCaloriesSeeker();
-        System.out.println("Task 1: " + seeker.getTheMostCalories());
+        System.out.println("Part 1: " + seeker.getTheMostCalories());
+        System.out.println("Part 2: " + seeker.getTotalOfTopThree());
 
 
     }
