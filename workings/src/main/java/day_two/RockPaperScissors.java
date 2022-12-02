@@ -26,6 +26,12 @@ import tools.Pair;
  */
 public class RockPaperScissors {
     private static final String INPUT_PATH = "input/dayTwo.txt";
+    private static final String ELF_ROCK = "A";
+    private static final String ELF_PAPER = "B";
+    private static final String ELF_SCISSORS = "C";
+    private static final String ROCK = "X";
+    private static final String PAPER = "Y";
+    private static final String SCISSORS = "Z";
     private int score;
 
     public RockPaperScissors() {
@@ -45,6 +51,37 @@ public class RockPaperScissors {
 
         return playStrategy;
     }
+
+    private int pointsForYourMove(Pair<String, String> pair){
+        int points;
+        String yourMove = pair.getSecond();
+        if(yourMove.equals(ROCK)){
+            points = 1;
+        } else if (yourMove.equals(PAPER)) {
+            points = 2;
+        }else {
+            points = 3;
+        }
+        return points;
+    }
+
+    private int pointsForDuel(Pair<String, String> pair){
+        int points = 0;
+        String elfMove = pair.getFirst();
+        String yourMove = pair.getSecond();
+
+        if(elfMove.equals(yourMove)){
+            points = 3;
+        } else if ((elfMove.equals(ELF_ROCK) && yourMove.equals(SCISSORS)) ||
+                    elfMove.equals(ELF_SCISSORS) && yourMove.equals(PAPER) ||
+                    elfMove.equals(ELF_PAPER) && yourMove.equals(ROCK)) {
+            points = 0;
+        }else {
+            points = 6;
+        }
+        return points;
+    }
+
 
     public int getScore() {
         return score;
