@@ -1,7 +1,6 @@
 package pl.joanna.bednarczyk.advent.of.code.day_two;
 
 
-
 import pl.joanna.bednarczyk.advent.of.code.tools.Pair;
 
 import java.io.BufferedReader;
@@ -30,19 +29,25 @@ import java.util.List;
  */
 public class RockPaperScissors {
     private static final String INPUT_PATH = "input/dayTwo.txt";
+    private static final List<Pair<String, String>> guidedStrategy = getInput();
     private static final String ELF_ROCK = "A";
     private static final String ELF_PAPER = "B";
     private static final String ELF_SCISSORS = "C";
     private static final String ROCK = "X";
     private static final String PAPER = "Y";
     private static final String SCISSORS = "Z";
+    private static final String LOOSE = "X";
+    private static final String DRAW = "Y";
+    private static final String WIN = "Z";
     private final int score;
+    private final int scorePredictedByElf;
 
     public RockPaperScissors() {
-        this.score = calculateTotalScore(getInput());
+        this.score = calculateTotalScore(guidedStrategy);
+        this.scorePredictedByElf = calculateScorePredictedByElf(guidedStrategy);
     }
 
-    private List<Pair<String, String>> getInput() {
+    private static List<Pair<String, String>> getInput() {
         List<Pair<String, String>> playStrategy = new ArrayList<>();
         try (BufferedReader fileReader = new BufferedReader(new FileReader(INPUT_PATH))) {
             String line;
@@ -109,8 +114,59 @@ public class RockPaperScissors {
         return totalScore;
     }
 
+    private int calculateScorePredictedByElf(List<Pair<String, String>> strategy){
+        return calculateTotalScore(decodeGuidelines(strategy));
+    }
+
+    private List<Pair<String, String>> decodeGuidelines(List<Pair<String, String>> givenInstructions){
+        List<Pair<String, String>> decodedStrategy = new ArrayList<>();
+        for(Pair<String, String> pair : givenInstructions){
+            String elfMove = pair.getFirst();
+            String instruction = pair.getSecond();
+            if(instruction.equals(DRAW)){
+                pair.setSecond(makeDraw(elfMove));
+            }else if(instruction.equals(WIN)){
+                pair.setSecond(win(elfMove));
+            }else {
+                pair.setSecond(loose(elfMove));
+            }
+            decodedStrategy.add(pair);
+        }
+        return decodedStrategy;
+    }
+
+    String makeDraw(String elfMove){
+        if (elfMove.equals(ELF_ROCK)){
+            return ROCK;
+        } else if (elfMove.equals(ELF_PAPER)) {
+            return PAPER;
+
+        }else return SCISSORS;
+    }
+
+    String win(String elfMove){
+        if (elfMove.equals(ELF_ROCK)){
+            return PAPER;
+        } else if (elfMove.equals(ELF_PAPER)) {
+            return SCISSORS;
+
+        }else return ROCK;
+    }
+
+    String loose(String elfMove){
+        if (elfMove.equals(ELF_ROCK)){
+            return SCISSORS;
+        } else if (elfMove.equals(ELF_PAPER)) {
+            return ROCK;
+
+        }else return PAPER;
+    }
 
     public int getScore() {
         return score;
+    }
+
+    public int getScorePredictedByElf() {
+        return scorePredictedByElf;
     }
 }

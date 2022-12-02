@@ -3,7 +3,6 @@
  */
 package pl.joanna.bednarczyk.advent.of.code;
 
-import pl.joanna.bednarczyk.advent.of.code.day_one.TheMostCaloriesSeeker;
 import pl.joanna.bednarczyk.advent.of.code.day_two.RockPaperScissors;
 
 public class App {
@@ -20,6 +19,7 @@ public class App {
 
         RockPaperScissors tournament = new RockPaperScissors();
         System.out.println("Part 1: " + tournament.getScore());
+        System.out.println("Part 2: " + tournament.getScorePredictedByElf());
 
 
     }
