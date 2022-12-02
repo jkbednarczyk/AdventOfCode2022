@@ -36,7 +36,7 @@ public class RockPaperScissors {
     private static final String ROCK = "X";
     private static final String PAPER = "Y";
     private static final String SCISSORS = "Z";
-    private int score;
+    private final int score;
 
     public RockPaperScissors() {
         this.score = calculateTotalScore(getInput());
@@ -72,20 +72,31 @@ public class RockPaperScissors {
     }
 
     private int pointsForDuel(Pair<String, String> pair) {
-        int points = 0;
+        int points;
         String elfMove = pair.getFirst();
         String yourMove = pair.getSecond();
 
-        if (elfMove.equals(yourMove)) {
+        if (isDraw(elfMove, yourMove)) {
             points = 3;
-        } else if ((elfMove.equals(ELF_ROCK) && yourMove.equals(SCISSORS)) ||
-                elfMove.equals(ELF_SCISSORS) && yourMove.equals(PAPER) ||
-                elfMove.equals(ELF_PAPER) && yourMove.equals(ROCK)) {
+        } else if (didElfWon(elfMove, yourMove)) {
             points = 0;
         } else {
             points = 6;
         }
+
         return points;
+    }
+
+    private boolean isDraw(String elfMove, String yourMove){
+        return elfMove.equals(ELF_ROCK) && yourMove.equals(ROCK) ||
+                elfMove.equals(ELF_PAPER) && yourMove.equals(PAPER) ||
+                elfMove.equals(ELF_SCISSORS) && yourMove.equals(SCISSORS);
+    }
+
+    private boolean didElfWon(String elfMove, String yourMove){
+        return elfMove.equals(ELF_ROCK) && yourMove.equals(SCISSORS) ||
+                elfMove.equals(ELF_SCISSORS) && yourMove.equals(PAPER) ||
+                elfMove.equals(ELF_PAPER) && yourMove.equals(ROCK);
     }
 
     private int calculateTotalScore(List<Pair<String, String>> strategy) {

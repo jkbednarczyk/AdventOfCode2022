@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41632ee4-cf7a-4e5e-afe6-19acc438bc0c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_one/TaskDescription.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_one/TheMostCaloriesSeeker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_two/RockPaperScissors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_two/TaskDescription.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/tools/Pair.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_two/RockPaperScissors.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_two/RockPaperScissors.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +32,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2INGQeFFDrxv6kWAepEI6ekk2Pl" />
   <component name="ProjectViewState">
