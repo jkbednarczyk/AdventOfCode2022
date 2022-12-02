@@ -1,5 +1,10 @@
 package day_two;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.*;
+import tools.Pair;
 
 /*
     Rock defeats Scissors,
@@ -20,10 +25,25 @@ package day_two;
     (0 if you lost, 3 if the round was a draw, and 6 if you won)
  */
 public class RockPaperScissors {
-
+    private static final String INPUT_PATH = "input/dayTwo.txt";
     private int score;
 
     public RockPaperScissors() {
+    }
+
+    private List<Pair<String, String>> getInput(){
+        List<Pair<String, String>> playStrategy = new ArrayList<>();
+        try(BufferedReader fileReader = new BufferedReader(new FileReader(INPUT_PATH))) {
+            String line;
+            while((line = fileReader.readLine()) != null){
+                String[] movesFromFile = line.split(" ");
+                Pair<String, String> moves = new Pair<>(movesFromFile[0], movesFromFile[1]);
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+        return playStrategy;
     }
 
     public int getScore() {
