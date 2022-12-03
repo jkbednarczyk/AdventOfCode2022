@@ -5,6 +5,7 @@ package pl.joanna.bednarczyk.advent.of.code;
 
 import pl.joanna.bednarczyk.advent.of.code.day_01.CalorieCounting;
 import pl.joanna.bednarczyk.advent.of.code.day_02.RockPaperScissors;
+import pl.joanna.bednarczyk.advent.of.code.day_03.RucksackReorganization;
 
 public class App {
     public static void main(String[] args) {
@@ -24,8 +25,8 @@ public class App {
 
         System.out.println("Day Three:");
 
-
-        System.out.println("Part 1: "  );
+        RucksackReorganization reorganization = new RucksackReorganization();
+        System.out.println("Part 1: " + reorganization.getSumOfPriorities());
         System.out.println("Part 2: " );
 
 

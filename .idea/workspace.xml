@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41632ee4-cf7a-4e5e-afe6-19acc438bc0c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_03/TaskDescription.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/tools/FileReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_one/TaskDescription.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_01/TaskDescription.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_one/TheMostCaloriesSeeker.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_01/TheMostCaloriesSeeker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_two/RockPaperScissors.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_02/RockPaperScissors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_two/TaskDescription.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_02/TaskDescription.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_03/RucksackReorganization.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_03/RucksackReorganization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/day_03.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input/day_03.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +32,13 @@
         </projects_view>
       </state>
     </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
