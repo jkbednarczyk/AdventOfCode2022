@@ -1,4 +1,4 @@
-package pl.joanna.bednarczyk.advent.of.code.day_two;
+package pl.joanna.bednarczyk.advent.of.code.day_02;
 
 
 import pl.joanna.bednarczyk.advent.of.code.tools.Pair;
@@ -28,7 +28,7 @@ import java.util.List;
     (0 if you lost, 3 if the round was a draw, and 6 if you won)
  */
 public class RockPaperScissors {
-    private static final String INPUT_PATH = "input/dayTwo.txt";
+    private static final String INPUT_PATH = "input/day_02.txt";
     private static final List<Pair<String, String>> guidedStrategy = getInput();
     private static final String ELF_ROCK = "A";
     private static final String ELF_PAPER = "B";

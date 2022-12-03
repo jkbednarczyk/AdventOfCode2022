@@ -1,18 +1,18 @@
-package pl.joanna.bednarczyk.advent.of.code.day_one;
+package pl.joanna.bednarczyk.advent.of.code.day_01;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
-public class TheMostCaloriesSeeker {
-    public static final String INPUT_PATH = "input/dayOneFirstTask.txt";
+public class CalorieCounting {
+    public static final String INPUT_PATH = "input/day_01.txt";
     public static final List<Integer> carriedCalories = carriedCalories();
 
     private int theMostCalories;
     private int totalOfTopThree;
 
-    public TheMostCaloriesSeeker(){
+    public CalorieCounting(){
         this.theMostCalories = findMaxCalories(carriedCalories);
         this.totalOfTopThree = calculateTotalOfTopThree(carriedCalories);
     }
