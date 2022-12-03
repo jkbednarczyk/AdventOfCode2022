@@ -16,9 +16,11 @@ import java.util.*;
 public class RucksackReorganization {
     private static final String INPUT_PATH = "input/day_03.txt";
     private final int sumOfPriorities;
+    private final int sumOfBadgesPriorities;
 
     public RucksackReorganization() {
         this.sumOfPriorities = calculatePriorities(getCompartments());
+        this.sumOfBadgesPriorities = calculateBadgesPriorities(getRucksacks());
     }
 
     private List<Pair<String, String>> getCompartments(){
@@ -32,6 +34,21 @@ public class RucksackReorganization {
                                                             content.substring(capacityOfCompartment));
             rucksacks.add(compartments);
         }
+        return rucksacks;
+    }
+
+    private String[] getRucksacks(){
+        FileReader reader = new FileReader(INPUT_PATH);
+        List<String> contentOfRucksack = reader.getInputFromFile();
+        String[] rucksacks = new String[contentOfRucksack.size()];
+
+        int iterator = 0;
+
+        for(String rucksack : contentOfRucksack){
+            rucksacks[iterator] = rucksack;
+            iterator++;
+        }
+
         return rucksacks;
     }
 
@@ -76,8 +93,38 @@ public class RucksackReorganization {
         }
     }
 
+    private int calculateBadgesPriorities(String[] rucksacks){
+        int sum = 0;
+        for(int i = 0; i < rucksacks.length ; i = i + 3){
+            sum += getPriority(findBadge(rucksacks[i], rucksacks[i + 1], rucksacks[i + 2]));
+        }
+
+        return sum;
+    }
+
+    private char findBadge(String firstRucksack, String secondRucksack,String thirdRucksack){
+        char badge = '&';
+        for(int i = 0; i < firstRucksack.length(); i++){
+            char item = firstRucksack.charAt(i);
+            for (int j = 0; j < secondRucksack.length(); j++){
+                if(item == secondRucksack.charAt(j)){
+                    for (int k = 0; k < thirdRucksack.length(); k++){
+                        if (item == thirdRucksack.charAt(k)){
+                            return item;
+                        }
+                    }
+                }
+            }
+        }
+
+        return badge;
+    }
 
     public int getSumOfPriorities() {
         return sumOfPriorities;
+    }
+
+    public int getSumOfBadgesPriorities() {
+        return sumOfBadgesPriorities;
     }
 }

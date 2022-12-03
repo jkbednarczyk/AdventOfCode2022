@@ -27,7 +27,8 @@ public class App {
 
         RucksackReorganization reorganization = new RucksackReorganization();
         System.out.println("Part 1: " + reorganization.getSumOfPriorities());
-        System.out.println("Part 2: " );
+        System.out.println("Part 2: " + reorganization.getSumOfBadgesPriorities());
+
 
 
     }

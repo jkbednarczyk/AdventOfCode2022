@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41632ee4-cf7a-4e5e-afe6-19acc438bc0c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/tools/FileReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_03/RucksackReorganization.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_03/RucksackReorganization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/day_03.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input/day_03.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_03/TaskDescription.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_03/TaskDescription.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
