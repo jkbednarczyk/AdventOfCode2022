@@ -31,10 +31,27 @@ public class CampCleanup {
         for(Pair<String, String> pair : pairList){
             String firstRange = pair.getFirst();
             String secondRange = pair.getSecond();
-
+            if(isRangeFullyContainedByOther(firstRange, secondRange)){
+                sum++;
+            }
         }
 
         return sum;
+    }
+
+    private boolean isRangeFullyContainedByOther(String firstRange, String secondRange){
+        Pair<Integer, Integer> firstAsNumbers = transformRangeToNumericValues(firstRange);
+        Pair<Integer, Integer> secondAsNumbers = transformRangeToNumericValues(secondRange);
+
+        return (firstAsNumbers.getFirst() <= secondAsNumbers.getFirst() &&
+                firstAsNumbers.getSecond() >= secondAsNumbers.getSecond()) ||
+                (secondAsNumbers.getFirst() <= firstAsNumbers.getFirst() &&
+                secondAsNumbers.getSecond() >= firstAsNumbers.getSecond());
+    }
+
+    private Pair<Integer, Integer> transformRangeToNumericValues(String range){
+        String[] rawRange = range.split("-");
+        return new Pair<>(Integer.parseInt(rawRange[0]), Integer.parseInt(rawRange[1]));
     }
     public int getNumberOfOverlaps() {
         return numberOfOverlaps;
