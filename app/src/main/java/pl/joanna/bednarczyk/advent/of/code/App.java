@@ -6,6 +6,7 @@ package pl.joanna.bednarczyk.advent.of.code;
 import pl.joanna.bednarczyk.advent.of.code.day_01.CalorieCounting;
 import pl.joanna.bednarczyk.advent.of.code.day_02.RockPaperScissors;
 import pl.joanna.bednarczyk.advent.of.code.day_03.RucksackReorganization;
+import pl.joanna.bednarczyk.advent.of.code.day_04.CampCleanup;
 
 public class App {
     public static void main(String[] args) {
@@ -23,11 +24,17 @@ public class App {
 //        System.out.println("Part 1: " + tournament.getScore());
 //        System.out.println("Part 2: " + tournament.getScorePredictedByElf());
 
-        System.out.println("Day Three:");
+//        System.out.println("Day Three:");
+//
+//        RucksackReorganization reorganization = new RucksackReorganization();
+//        System.out.println("Part 1: " + reorganization.getSumOfPriorities());
+//        System.out.println("Part 2: " + reorganization.getSumOfBadgesPriorities());
 
-        RucksackReorganization reorganization = new RucksackReorganization();
-        System.out.println("Part 1: " + reorganization.getSumOfPriorities());
-        System.out.println("Part 2: " + reorganization.getSumOfBadgesPriorities());
+        System.out.println("Day Four:");
+
+        CampCleanup cleanup = new CampCleanup();
+        System.out.println("Part 1: " + cleanup.getNumberOfOverlaps());
+        System.out.println("Part 2: " );
 
 
 
