@@ -3,9 +3,6 @@
  */
 package pl.joanna.bednarczyk.advent.of.code;
 
-import pl.joanna.bednarczyk.advent.of.code.day_01.CalorieCounting;
-import pl.joanna.bednarczyk.advent.of.code.day_02.RockPaperScissors;
-import pl.joanna.bednarczyk.advent.of.code.day_03.RucksackReorganization;
 import pl.joanna.bednarczyk.advent.of.code.day_04.CampCleanup;
 
 public class App {
@@ -33,8 +30,8 @@ public class App {
         System.out.println("Day Four:");
 
         CampCleanup cleanup = new CampCleanup();
-        System.out.println("Part 1: " + cleanup.getNumberOfOverlaps());
-        System.out.println("Part 2: " );
+        System.out.println("Part 1: " + cleanup.getNumberOfFullyContained());
+        System.out.println("Part 2: " + cleanup.getNumberOfOverlaps());
 
 
 

@@ -6,10 +6,11 @@ import java.util.*;
 
 public class CampCleanup {
     private static final String INPUT_PATH = "input/day_04.txt";
+    private int numberOfFullyContained;
     private int numberOfOverlaps;
 
     public CampCleanup(){
-        this.numberOfOverlaps = countOverlaps(getPairRanges());
+        this.numberOfFullyContained = countFullyContainedRanges(getPairRanges());
     }
 
     private List<Pair<String, String>> getPairRanges(){
@@ -26,7 +27,7 @@ public class CampCleanup {
         return pairs;
     }
 
-    private int countOverlaps(List<Pair<String, String>> pairList){
+    private int countFullyContainedRanges(List<Pair<String, String>> pairList){
         int sum = 0;
         for(Pair<String, String> pair : pairList){
             String firstRange = pair.getFirst();
@@ -53,6 +54,10 @@ public class CampCleanup {
         String[] rawRange = range.split("-");
         return new Pair<>(Integer.parseInt(rawRange[0]), Integer.parseInt(rawRange[1]));
     }
+    public int getNumberOfFullyContained() {
+        return numberOfFullyContained;
+    }
+
     public int getNumberOfOverlaps() {
         return numberOfOverlaps;
     }
