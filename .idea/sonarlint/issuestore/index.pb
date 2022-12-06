@@ -25,3 +25,7 @@ Papp/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_03/TaskDescription.tx
 Xapp/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_03/RucksackReorganization.java,8\8\88a559419fdf0becf29fc31c795eb3922c83cf77
 €
 Papp/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_04/TaskDescription.txt,0\c\0c1778551797f52aa03f04d07ad88040a1175fb1
+}
+Mapp/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_04/CampCleanup.java,e\a\ea005d5a83f0f81160fa11e1e623dd463df4f896
+@
+input/day_04.txt,c\f\cf67962de5dabcc12117adccddc40253b9227293
