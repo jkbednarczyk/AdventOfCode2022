@@ -15,3 +15,13 @@ Papp/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_02/TaskDescription.tx
 Qapp/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_01/CalorieCounting.java,3\e\3eeb1d7bea1bc9daf764e470e3725af99bbe9cf2
 ƒ
 Sapp/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_02/RockPaperScissors.java,3\0\30e2bf8370ad811b0d5009e861c7a48d710c27d0
+{
+Kapp/src/main/java/pl/joanna/bednarczyk/advent/of/code/tools/FileReader.java,8\7\87e32328c564004e070aff9e37074570ae05cee4
+€
+Papp/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_03/TaskDescription.txt,d\a\da4ce22f607d98794c38b7e77270a20f01d432ac
+@
+input/day_03.txt,5\4\547895e12a647441609cf04316396bd8fc133d95
+ˆ
+Xapp/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_03/RucksackReorganization.java,8\8\88a559419fdf0becf29fc31c795eb3922c83cf77
+€
+Papp/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_04/TaskDescription.txt,0\c\0c1778551797f52aa03f04d07ad88040a1175fb1

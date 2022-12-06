@@ -4,6 +4,7 @@
 package pl.joanna.bednarczyk.advent.of.code;
 
 import pl.joanna.bednarczyk.advent.of.code.day_04.CampCleanup;
+import pl.joanna.bednarczyk.advent.of.code.day_05.SupplyStacks;
 
 public class App {
     public static void main(String[] args) {
@@ -27,11 +28,17 @@ public class App {
 //        System.out.println("Part 1: " + reorganization.getSumOfPriorities());
 //        System.out.println("Part 2: " + reorganization.getSumOfBadgesPriorities());
 
-        System.out.println("Day Four:");
+//        System.out.println("Day Four:");
+//
+//        CampCleanup cleanup = new CampCleanup();
+//        System.out.println("Part 1: " + cleanup.getNumberOfFullyContained());
+//        System.out.println("Part 2: " + cleanup.getNumberOfOverlaps());
 
-        CampCleanup cleanup = new CampCleanup();
-        System.out.println("Part 1: " + cleanup.getNumberOfFullyContained());
-        System.out.println("Part 2: " + cleanup.getNumberOfOverlaps());
+        System.out.println("Day Five:");
+
+        SupplyStacks supplyStacks = new SupplyStacks();
+        System.out.println("Part 1: " + supplyStacks.getTopOfStacks());
+        System.out.println("Part 2: " );
 
 
 
