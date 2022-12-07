@@ -4,6 +4,7 @@
 package pl.joanna.bednarczyk.advent.of.code;
 
 import pl.joanna.bednarczyk.advent.of.code.day_05.SupplyStacks;
+import pl.joanna.bednarczyk.advent.of.code.day_06.TuningTrouble;
 
 public class App {
     public static void main(String[] args) {
@@ -32,12 +33,18 @@ public class App {
 //        CampCleanup cleanup = new CampCleanup();
 //        System.out.println("Part 1: " + cleanup.getNumberOfFullyContained());
 //        System.out.println("Part 2: " + cleanup.getNumberOfOverlaps());
+//
+//        System.out.println("Day Five:");
+//
+//        SupplyStacks supplyStacks = new SupplyStacks();
+//        System.out.println("Part 1: " + supplyStacks.getTopOfStacksMover9000());
+//        System.out.println("Part 2: " + supplyStacks.getTopOfStacksMover9001());
 
-        System.out.println("Day Five:");
+        System.out.println("Day Six:");
 
-        SupplyStacks supplyStacks = new SupplyStacks();
-        System.out.println("Part 1: " + supplyStacks.getTopOfStacksMover9000());
-        System.out.println("Part 2: " + supplyStacks.getTopOfStacksMover9001());
+        TuningTrouble tuningTrouble = new TuningTrouble();
+        System.out.println("Part 1: " + tuningTrouble.getMarkersEnd());
+        System.out.println("Part 2: ");
 
 
 
