@@ -12,10 +12,11 @@ public class SupplyStacks {
     private static final int INITIAL_HEIGHT_OF_STACKS = 8;
     private static final int CHARS_IN_INPUT = 35;
 
-    private String topOfStacks;
+    private final String topOfStacks;
 
     public SupplyStacks(){
-        List<Stack<String>> initialStateOfStacks = getInitialStateOfStacks(readInput());
+        List<String> fromFile = readInput();
+        this.topOfStacks = readStackTops(executeInstructions(fromFile));
     }
 
     private static List<String> readInput(){
@@ -31,33 +32,43 @@ public class SupplyStacks {
 
     private static List<Stack<String>> constructStacks(char[][] inputInArray) {
         List<Stack<String>> initialStateOfStacks = new ArrayList<>();
-        for(int i = 0; i < NUMBER_OF_STACKS; i++){
+        for(int i = NUMBER_OF_STACKS - 1; i >= 0; i--){
             Stack<String> stack = new Stack<>();
-            for(int j = 0; j < INITIAL_HEIGHT_OF_STACKS; j++){
+            for(int j = INITIAL_HEIGHT_OF_STACKS - 1; j >= 0; j--){
                 String temp = "" + inputInArray[i][j];
+
                 if (!temp.equals(" ")){
                     stack.push(temp);
                 }
             }
             initialStateOfStacks.add(stack);
         }
-        return initialStateOfStacks;
+        return reverseListOfStacks(initialStateOfStacks);
+    }
+
+    private static List<Stack<String>> reverseListOfStacks(List<Stack<String>> list){
+        List<Stack<String>> output = new ArrayList<>();
+        for (int i = list.size() - 1; i >= 0; i--){
+            output.add(list.get(i));
+        }
+
+        return output;
     }
 
     private static char[][] putStacksInArray(List<String> input) {
         char[][] inputInArray = new char[NUMBER_OF_STACKS][INITIAL_HEIGHT_OF_STACKS];
-        String rawStack;
+        StringBuilder rawStack;
 
         for (int i = INITIAL_HEIGHT_OF_STACKS - 1; i >=0; i--){
-            rawStack = "";
+            rawStack = new StringBuilder();
             String line = input.get(i);
             if(line.length() < CHARS_IN_INPUT){
                 line = String.format("%-35s", line);
             }
             for (int j = 1; j < CHARS_IN_INPUT; j += 4){
-                rawStack += line.substring(j, j +1);
+                rawStack.append(line.charAt(j));
             }
-            char[] singleLine = rawStack.toCharArray();
+            char[] singleLine = rawStack.toString().toCharArray();
             for (int k = 0; k < NUMBER_OF_STACKS; k++){
                 inputInArray[k][i] = singleLine[k];
             }
@@ -65,6 +76,45 @@ public class SupplyStacks {
         return inputInArray;
     }
 
+    private List<MoveInstruction> getInstructions(List<String> input){
+        List<MoveInstruction> instructions = new ArrayList<>();
+        for(int i = 10; i < input.size(); i++){
+            String[] line = input.get(i).split(" ");
+            instructions.add(new MoveInstruction(Integer.parseInt(line[1]), Integer.parseInt(line[3]), Integer.parseInt(line[5])));
+        }
+
+        return instructions;
+    }
+
+    private List<Stack<String>> executeInstructions(List<String> inputFromFile){
+        List<Stack<String>> initialStateOfStacks = getInitialStateOfStacks(inputFromFile);
+        List<MoveInstruction> instructions = getInstructions(inputFromFile);
+
+        for(MoveInstruction move : instructions){
+            Stack<String> from = initialStateOfStacks.get(move.getFrom() - 1);
+            Stack<String> to = initialStateOfStacks.get(move.getTo() - 1);
+
+            for(int i = 0; i < move.getHowMany(); i++){
+                String item = from.pop();
+                to.push(item);
+            }
+            initialStateOfStacks.set(move.getFrom() - 1, from);
+            initialStateOfStacks.set(move.getTo() - 1, to);
+
+        }
+
+
+        return initialStateOfStacks;
+    }
+
+    private String readStackTops(List<Stack<String>> afterRearrangement){
+        String output = "";
+        for(Stack<String> stack : afterRearrangement){
+            output += stack.peek();
+        }
+
+        return output;
+    }
 
     public String getTopOfStacks() {
         return topOfStacks;
