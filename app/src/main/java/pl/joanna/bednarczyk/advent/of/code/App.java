@@ -5,6 +5,7 @@ package pl.joanna.bednarczyk.advent.of.code;
 
 import pl.joanna.bednarczyk.advent.of.code.day_05.SupplyStacks;
 import pl.joanna.bednarczyk.advent.of.code.day_06.TuningTrouble;
+import pl.joanna.bednarczyk.advent.of.code.day_07.NoSpaceLeftOnDevice;
 
 public class App {
     public static void main(String[] args) {
@@ -40,11 +41,17 @@ public class App {
 //        System.out.println("Part 1: " + supplyStacks.getTopOfStacksMover9000());
 //        System.out.println("Part 2: " + supplyStacks.getTopOfStacksMover9001());
 
-        System.out.println("Day Six:");
+//        System.out.println("Day Six:");
+//
+//        TuningTrouble tuningTrouble = new TuningTrouble();
+//        System.out.println("Part 1: " + tuningTrouble.getMarkersEnd());
+//        System.out.println("Part 2: " + tuningTrouble.getMessageMarkerBeginning());
 
-        TuningTrouble tuningTrouble = new TuningTrouble();
-        System.out.println("Part 1: " + tuningTrouble.getMarkersEnd());
-        System.out.println("Part 2: " + tuningTrouble.getMessageMarkerBeginning());
+        System.out.println("Day Seven:");
+
+        NoSpaceLeftOnDevice noSpaceLeftOnDevice = new NoSpaceLeftOnDevice();
+        System.out.println("Part 1: " );
+        System.out.println("Part 2: " );
 
 
 
