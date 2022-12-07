@@ -29,3 +29,11 @@ Papp/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_04/TaskDescription.tx
 Mapp/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_04/CampCleanup.java,e\a\ea005d5a83f0f81160fa11e1e623dd463df4f896
 @
 input/day_04.txt,c\f\cf67962de5dabcc12117adccddc40253b9227293
+Å
+Qapp/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_05/MoveInstruction.java,1\8\18bc58d0779e3023199362acba559aaba802ad84
+@
+input/day_05.txt,2\a\2a86fda112e9abb827f0bf45ce24715f65c8c348
+Ä
+Papp/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_05/TaskDescription.txt,2\b\2b111e106098dc22a6f3450b1ab7b201dac9178b
+~
+Napp/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_05/SupplyStacks.java,2\1\21122f14ac12830b30746167cb3c50a36c511b3f

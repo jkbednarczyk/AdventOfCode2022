@@ -44,7 +44,7 @@ public class App {
 
         TuningTrouble tuningTrouble = new TuningTrouble();
         System.out.println("Part 1: " + tuningTrouble.getMarkersEnd());
-        System.out.println("Part 2: ");
+        System.out.println("Part 2: " + tuningTrouble.getMessageMarkerBeginning());
 
 
 

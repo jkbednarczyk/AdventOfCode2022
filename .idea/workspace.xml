@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41632ee4-cf7a-4e5e-afe6-19acc438bc0c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_06/TaskDescription.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_06/TaskDescription.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_06/TuningTrouble.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pl/joanna/bednarczyk/advent/of/code/day_06/TuningTrouble.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
