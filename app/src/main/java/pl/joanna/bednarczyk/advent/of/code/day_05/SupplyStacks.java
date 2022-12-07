@@ -12,12 +12,16 @@ public class SupplyStacks {
     private static final int INITIAL_HEIGHT_OF_STACKS = 8;
     private static final int CHARS_IN_INPUT = 35;
 
-    private final String topOfStacks;
+    private final String topOfStacksMover9000;
+    private final String topOfStacksMover9001;
 
     public SupplyStacks(){
         List<String> fromFile = readInput();
-        this.topOfStacks = readStackTops(executeInstructions(fromFile));
+        this.topOfStacksMover9000 = readStackTops(executeInstructionsMover9000(fromFile));
+        this.topOfStacksMover9001 = readStackTops(executeInstructionsMover9001(fromFile));
     }
+
+
 
     private static List<String> readInput(){
         FileReader reader = new FileReader(INPUT_PATH);
@@ -86,7 +90,7 @@ public class SupplyStacks {
         return instructions;
     }
 
-    private List<Stack<String>> executeInstructions(List<String> inputFromFile){
+    private List<Stack<String>> executeInstructionsMover9000(List<String> inputFromFile){
         List<Stack<String>> initialStateOfStacks = getInitialStateOfStacks(inputFromFile);
         List<MoveInstruction> instructions = getInstructions(inputFromFile);
 
@@ -107,6 +111,32 @@ public class SupplyStacks {
         return initialStateOfStacks;
     }
 
+    private List<Stack<String>> executeInstructionsMover9001(List<String> inputFromFile) {
+        List<Stack<String>> initialStateOfStacks = getInitialStateOfStacks(inputFromFile);
+        List<MoveInstruction> instructions = getInstructions(inputFromFile);
+
+        for(MoveInstruction move : instructions){
+            Stack<String> from = initialStateOfStacks.get(move.getFrom() - 1);
+            Stack<String> to = initialStateOfStacks.get(move.getTo() - 1);
+
+            String[] items = new String[move.getHowMany()];
+            for(int i = 0; i < move.getHowMany(); i++){
+                items[i] = from.pop();
+
+            }
+            for (int i = move.getHowMany() - 1; i >= 0; i--){
+                to.push(items[i]);
+            }
+
+            initialStateOfStacks.set(move.getFrom() - 1, from);
+            initialStateOfStacks.set(move.getTo() - 1, to);
+
+        }
+
+
+        return initialStateOfStacks;
+    }
+
     private String readStackTops(List<Stack<String>> afterRearrangement){
         String output = "";
         for(Stack<String> stack : afterRearrangement){
@@ -116,7 +146,11 @@ public class SupplyStacks {
         return output;
     }
 
-    public String getTopOfStacks() {
-        return topOfStacks;
+    public String getTopOfStacksMover9000() {
+        return topOfStacksMover9000;
+    }
+
+    public String getTopOfStacksMover9001() {
+        return topOfStacksMover9001;
     }
 }

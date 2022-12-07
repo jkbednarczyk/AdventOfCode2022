@@ -3,7 +3,6 @@
  */
 package pl.joanna.bednarczyk.advent.of.code;
 
-import pl.joanna.bednarczyk.advent.of.code.day_04.CampCleanup;
 import pl.joanna.bednarczyk.advent.of.code.day_05.SupplyStacks;
 
 public class App {
@@ -37,8 +36,8 @@ public class App {
         System.out.println("Day Five:");
 
         SupplyStacks supplyStacks = new SupplyStacks();
-        System.out.println("Part 1: " + supplyStacks.getTopOfStacks());
-        System.out.println("Part 2: " );
+        System.out.println("Part 1: " + supplyStacks.getTopOfStacksMover9000());
+        System.out.println("Part 2: " + supplyStacks.getTopOfStacksMover9001());
 
 
 
